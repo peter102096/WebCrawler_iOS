@@ -41,20 +41,12 @@ class Network: NSObject {
             let rates = doc.xpath("//div[@class='doctor_descript group']")
             print("rates count : \(rates.count)")
             for rate in rates {
-                print(rate.at_xpath("//div[@class='doc_pic']")?.toHTML)
-                print(rate.text)
+                guard let docPicUrl = rate.at_xpath("//div[@class='doc_pic']")?.at_xpath("//input[@type='image']")?["src"] else { return }
+                print("docPicUrl : \(docPicUrl)")
+                guard let docName = rate.at_xpath("//div[@class='doc_detail']")?.at_xpath("//table")?.at_xpath("//thead")?.at_xpath("//tr")?.at_xpath("//td[@colspan='2']")?.text else { return }
+                print("docName : \(docName)")
+                print("經歷 : \(rate.at_xpath("//div[@class='doc_detail']")?.at_xpath("//table")?.at_xpath("//tbody")?.at_xpath("//tr")?.innerHTML)")
             }
-            
-//            let rates = doc.xpath("/html/body/div[3]/div/div[1]/div")
-//            print("rates count : \(rates.count)")
-////            dump(rates)
-//            for raaaa in rates {
-//                print("dsdsdffs : \(raaaa.toHTML)")
-//            }
-//            print("------------------------------------")
-//            for rate in doc.xpath("/html/body/div[3]/div/div[1]/div/div[2]") {
-//                print("rate : \(rate.toHTML)")
-//            }
         }
     }
 }
