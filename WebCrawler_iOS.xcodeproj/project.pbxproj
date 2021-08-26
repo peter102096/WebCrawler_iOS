@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		AC6E703E26D7646D00EEF281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6E703C26D7646D00EEF281 /* Main.storyboard */; };
 		AC6E704026D7646F00EEF281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6E703F26D7646F00EEF281 /* Assets.xcassets */; };
 		AC6E704326D7646F00EEF281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6E704126D7646F00EEF281 /* LaunchScreen.storyboard */; };
+		AC6E704C26D76E5600EEF281 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E704B26D76E5600EEF281 /* Network.swift */; };
 		B9A74628FE15DB5AD20B80A7 /* Pods_WebCrawler_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645E1CD74DFC2C4AC4CD3F6E /* Pods_WebCrawler_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		AC6E703F26D7646F00EEF281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC6E704226D7646F00EEF281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC6E704426D7646F00EEF281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6E704B26D76E5600EEF281 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B1ED8A078D5F3C7DF22FEEB1 /* Pods-WebCrawler_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebCrawler_iOS.debug.xcconfig"; path = "Target Support Files/Pods-WebCrawler_iOS/Pods-WebCrawler_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +58,6 @@
 				B1ED8A078D5F3C7DF22FEEB1 /* Pods-WebCrawler_iOS.debug.xcconfig */,
 				08A76AA61985F873E107BADC /* Pods-WebCrawler_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +82,7 @@
 		AC6E703526D7646D00EEF281 /* WebCrawler_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				AC6E704A26D76E4000EEF281 /* Model */,
 				AC6E703626D7646D00EEF281 /* AppDelegate.swift */,
 				AC6E703826D7646D00EEF281 /* SceneDelegate.swift */,
 				AC6E703A26D7646D00EEF281 /* ViewController.swift */,
@@ -90,6 +92,14 @@
 				AC6E704426D7646F00EEF281 /* Info.plist */,
 			);
 			path = WebCrawler_iOS;
+			sourceTree = "<group>";
+		};
+		AC6E704A26D76E4000EEF281 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC6E704B26D76E5600EEF281 /* Network.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6E704C26D76E5600EEF281 /* Network.swift in Sources */,
 				AC6E703B26D7646D00EEF281 /* ViewController.swift in Sources */,
 				AC6E703726D7646D00EEF281 /* AppDelegate.swift in Sources */,
 				AC6E703926D7646D00EEF281 /* SceneDelegate.swift in Sources */,
