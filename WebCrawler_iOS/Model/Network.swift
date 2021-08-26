@@ -45,7 +45,13 @@ class Network: NSObject {
                 print("docPicUrl : \(docPicUrl)")
                 guard let docName = rate.at_xpath("//div[@class='doc_detail']")?.at_xpath("//table")?.at_xpath("//thead")?.at_xpath("//tr")?.at_xpath("//td[@colspan='2']")?.text else { return }
                 print("docName : \(docName)")
-                print("經歷 : \(rate.at_xpath("//div[@class='doc_detail']")?.at_xpath("//table")?.at_xpath("//tbody")?.at_xpath("//tr")?.innerHTML)")
+                guard let docExperience = rate.at_xpath("//div[@class='doc_detail']")?.at_xpath("//table")?.at_xpath("//tbody")?.at_xpath("//tr")?.css("td")[1].text else { return }
+                let docExpArray = docExperience.split(separator: "\r\n")
+                print("docExperience : \(docExpArray)")
+                guard let docSkills = rate.at_xpath("//div[@class='doc_detail']")?.at_xpath("//table")?.at_xpath("//tbody")?.css("tr")[1].css("td")[1].text else { return }
+                print("docSkills : \(docSkills)")
+                guard let docCerts =  rate.at_xpath("//div[@class='doc_detail']")?.at_xpath("//table")?.at_xpath("//tbody")?.css("tr")[2].css("td")[1].text else { return }
+                print("docCerts : \(docCerts.trimmingCharacters(in: .whitespacesAndNewlines))")
             }
         }
     }
