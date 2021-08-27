@@ -14,6 +14,8 @@
 		AC6E704026D7646F00EEF281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6E703F26D7646F00EEF281 /* Assets.xcassets */; };
 		AC6E704326D7646F00EEF281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6E704126D7646F00EEF281 /* LaunchScreen.storyboard */; };
 		AC6E704C26D76E5600EEF281 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E704B26D76E5600EEF281 /* Network.swift */; };
+		ACE55C6926D8AAC300E936FF /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE55C6826D8AAC300E936FF /* Cells.swift */; };
+		ACE55C6B26D8AD0700E936FF /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE55C6A26D8AD0700E936FF /* Struct.swift */; };
 		B9A74628FE15DB5AD20B80A7 /* Pods_WebCrawler_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645E1CD74DFC2C4AC4CD3F6E /* Pods_WebCrawler_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		AC6E704226D7646F00EEF281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC6E704426D7646F00EEF281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC6E704B26D76E5600EEF281 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		ACE55C6826D8AAC300E936FF /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		ACE55C6A26D8AD0700E936FF /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		B1ED8A078D5F3C7DF22FEEB1 /* Pods-WebCrawler_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebCrawler_iOS.debug.xcconfig"; path = "Target Support Files/Pods-WebCrawler_iOS/Pods-WebCrawler_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				AC6E704B26D76E5600EEF281 /* Network.swift */,
+				ACE55C6826D8AAC300E936FF /* Cells.swift */,
+				ACE55C6A26D8AD0700E936FF /* Struct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,10 +222,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE55C6B26D8AD0700E936FF /* Struct.swift in Sources */,
 				AC6E704C26D76E5600EEF281 /* Network.swift in Sources */,
 				AC6E703B26D7646D00EEF281 /* ViewController.swift in Sources */,
 				AC6E703726D7646D00EEF281 /* AppDelegate.swift in Sources */,
 				AC6E703926D7646D00EEF281 /* SceneDelegate.swift in Sources */,
+				ACE55C6926D8AAC300E936FF /* Cells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

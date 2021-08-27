@@ -7,6 +7,7 @@ target 'WebCrawler_iOS' do
 
   # Pods for WebCrawler_iOS
   pod 'Alamofire'
+  pod 'AlamofireImage'
   pod 'Kanna'
 
 end
