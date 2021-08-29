@@ -8,41 +8,65 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var docTableView: UITableView!
     
-    var docDescripts: [DocDescript] = []
+    @IBOutlet weak var hospitalPicker: UIPickerView!
     
-    let network = Network()
+    @IBOutlet weak var doctorNameTextField: UITextField!
+    
+    let hospitals = ["童綜合沙鹿胸腔內科", "光田一般內科", "光田神經科"]
+    
+    var didSelectedHospital = "童綜合沙鹿胸腔內科"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        docTableView.dataSource = self
+        doctorNameTextField.text = "賴炳村"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        hospitalPicker.dataSource = self
+        hospitalPicker.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        network.getHtmlSource() { isSuccess in
-            if isSuccess {
-                self.docDescripts = self.network.docDescripts!
-                self.docTableView.reloadData()
+        
+    }
+    
+    @IBAction func searchBtnAction(_ sender: Any) {
+        let vc = DoctorDetailViewController.fromStoryBoard()
+        vc.docName = doctorNameTextField.text!
+        if didSelectedHospital.contains("童綜合") {
+            vc.type = .demo1
+        } else {
+            if didSelectedHospital.contains("一般內科") {
+                vc.type = .demo2
+            } else {
+                vc.type = .demo3
             }
         }
+        self.push(vc: vc)
     }
 
 }
 
-extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return docDescripts.count
+extension ViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DocDescriptCell") as! DocDescriptCell
-        cell.setUp(docDes: docDescripts[indexPath.row])
-        return cell
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return hospitals.count
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return hospitals[row]
+    }
     
 }
 
+extension ViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("選擇的是 : \(hospitals[row])")
+        didSelectedHospital = hospitals[row]
+    }
+}

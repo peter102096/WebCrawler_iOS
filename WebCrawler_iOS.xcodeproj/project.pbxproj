@@ -17,6 +17,8 @@
 		ACE55C6926D8AAC300E936FF /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE55C6826D8AAC300E936FF /* Cells.swift */; };
 		ACE55C6B26D8AD0700E936FF /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE55C6A26D8AD0700E936FF /* Struct.swift */; };
 		B9A74628FE15DB5AD20B80A7 /* Pods_WebCrawler_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645E1CD74DFC2C4AC4CD3F6E /* Pods_WebCrawler_iOS.framework */; };
+		D06E36B626DBBBF700224EB1 /* DoctorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E36B526DBBBF700224EB1 /* DoctorDetailViewController.swift */; };
+		D06E36B826DBCA0400224EB1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E36B726DBCA0400224EB1 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		ACE55C6826D8AAC300E936FF /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		ACE55C6A26D8AD0700E936FF /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		B1ED8A078D5F3C7DF22FEEB1 /* Pods-WebCrawler_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebCrawler_iOS.debug.xcconfig"; path = "Target Support Files/Pods-WebCrawler_iOS/Pods-WebCrawler_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D06E36B526DBBBF700224EB1 /* DoctorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailViewController.swift; sourceTree = "<group>"; };
+		D06E36B726DBCA0400224EB1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 				AC6E703626D7646D00EEF281 /* AppDelegate.swift */,
 				AC6E703826D7646D00EEF281 /* SceneDelegate.swift */,
 				AC6E703A26D7646D00EEF281 /* ViewController.swift */,
+				D06E36B526DBBBF700224EB1 /* DoctorDetailViewController.swift */,
 				AC6E703C26D7646D00EEF281 /* Main.storyboard */,
 				AC6E703F26D7646F00EEF281 /* Assets.xcassets */,
 				AC6E704126D7646F00EEF281 /* LaunchScreen.storyboard */,
@@ -104,6 +109,7 @@
 				AC6E704B26D76E5600EEF281 /* Network.swift */,
 				ACE55C6826D8AAC300E936FF /* Cells.swift */,
 				ACE55C6A26D8AD0700E936FF /* Struct.swift */,
+				D06E36B726DBCA0400224EB1 /* Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,8 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06E36B626DBBBF700224EB1 /* DoctorDetailViewController.swift in Sources */,
 				ACE55C6B26D8AD0700E936FF /* Struct.swift in Sources */,
 				AC6E704C26D76E5600EEF281 /* Network.swift in Sources */,
+				D06E36B826DBCA0400224EB1 /* Extensions.swift in Sources */,
 				AC6E703B26D7646D00EEF281 /* ViewController.swift in Sources */,
 				AC6E703726D7646D00EEF281 /* AppDelegate.swift in Sources */,
 				AC6E703926D7646D00EEF281 /* SceneDelegate.swift in Sources */,

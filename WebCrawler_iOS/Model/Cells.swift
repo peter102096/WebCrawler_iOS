@@ -31,3 +31,14 @@ class DocDescriptCell: UITableViewCell {
         docCertsLabel.text = docDes.docCerts.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
+
+class DoctorDetailCell: UITableViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
+    
+    func setUp(title: String, content: String) {
+        titleLabel.text = title
+        contentLabel.text = content
+    }
+    
+}
