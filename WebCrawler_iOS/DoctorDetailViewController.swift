@@ -55,6 +55,9 @@ class DoctorDetailViewController: UIViewController {
                 if type == .demo1 {
                     docDetail.append(DocDetail(title: "證照", content: docDescript!.docCerts.trimmingCharacters(in: .whitespacesAndNewlines)))
                 }
+                if type == .demo3, docDescript!.docCerts != "" {
+                    docDetail.append(DocDetail(title: "特殊治療項目", content: docDescript!.docCerts))
+                }
                 
                 DispatchQueue.main.async { [self] in
                     guard let url = URL(string: docDescript!.docImgUrl) else {

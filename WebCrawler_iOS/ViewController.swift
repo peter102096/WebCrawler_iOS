@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        doctorNameTextField.text = "賴炳村"
+        doctorNameTextField.text = "林毓慧"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +66,6 @@ extension ViewController: UIPickerViewDataSource {
 
 extension ViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("選擇的是 : \(hospitals[row])")
         didSelectedHospital = hospitals[row]
     }
 }
