@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        doctorNameTextField.text = "林毓慧"
+        doctorNameTextField.text = ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
